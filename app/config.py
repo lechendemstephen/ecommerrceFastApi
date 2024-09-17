@@ -7,7 +7,8 @@ class Settings(BaseSettings):
     database_host: str 
     
     secret_key: str 
-    access_time_expire_minutes: str 
+    access_time_expire_minutes: int
+    algorithm: str 
 
     class Config: 
         env_file = '.env'

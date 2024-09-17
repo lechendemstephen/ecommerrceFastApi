@@ -2,8 +2,9 @@ from pydantic import BaseModel, EmailStr
 
 
 class CreatePost(BaseModel): 
-    pass 
-
+    title: str
+    description: str
+    
 
 
 class SignUp(BaseModel): 
@@ -15,3 +16,7 @@ class SignUp(BaseModel):
 class Login(BaseModel): 
     email: EmailStr
     password: str 
+
+class TokenData(BaseModel): 
+    id: str 
+
